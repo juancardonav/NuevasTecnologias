@@ -18,38 +18,28 @@ public class Arreglos {
      */
     public static void main(String[] args) {
         
-        String producto1="cocacola";
-        String producto2="papa";
-        String producto3 ="arroz";     
-        String producto4="cañon cerdo";
-        String producto5="panes";        
-        String producto6="piña";        
-       
+    
         Scanner entrada= new Scanner(System.in);
         
-        int[] numeros = new int[4];
+        Personas[] personas = new Personas[4];
         
-        
-        
-        numeros[0]=1;
-        numeros[1]=1 ;       
-        numeros[2]=1 ;       
-        numeros[3]=1 ;  
-                
-        for(int i=0; i<numeros.length; i++){
+         
+        for(int i=0; i<personas.length; i++){
             
-            System.out.println("Digite el dato: "+ i);
-            numeros[i]=entrada.nextInt();
+            personas[i] = new Personas();
             
-            
+            System.out.println("Digite el nombre de la persona: "+ i);
+            personas[i].setNombre(entrada.next());
+
         }
         
-        
-         for(int i=0; i<numeros.length; i++){
+        for(int i=0; i<personas.length; i++){
             
-            System.out.println(numeros[i]);
+            System.out.println("Digite el nombre de la persona: "+ personas[i].getNombre());
             
-            
+
         }
+        
+       
     }
 }
